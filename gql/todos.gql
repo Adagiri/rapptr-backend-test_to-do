@@ -1,0 +1,30 @@
+extend type Query {
+  getTodos: [Todo!]!
+  getTodo(todoId: ID!): Todo!
+}
+
+extend type Mutation {
+  addTodo(title: String!, description: String!): TodoResponse!
+  editTodo(todoId: ID!, updates: TodoUpdatesInput!): TodoResponse!
+  deleteTodo(todoId: ID!): TodoResponse!
+}
+
+type Todo {
+  _id: ID!
+  title: String!
+  description: String!
+  isCompleted: Boolean!
+}
+
+type TodoResponse {
+  code: String!
+  success: Boolean!
+  error: String
+  data: Todo
+}
+
+input TodoUpdatesInput {
+  title: String
+  description: String
+  isCompleted: Boolean
+}
