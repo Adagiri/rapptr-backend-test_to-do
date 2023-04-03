@@ -12,5 +12,5 @@ __NOTES__
 
 2. You can use apollo sandbox (https://studio.apollographql.com/sandbox/explorer) to inspect and test the api.
 
-1. Any endpoint that throws a login error, requires that you must be logged in. Include an authorization header that has a value of 'Bearer ${token}', where token is the authentication token received after logging in.
+1. Any endpoint that throws a login error requires that you must be logged in. Include an authorization header that have a value of 'Bearer ${token}', where token is the authentication token received after logging in.
 
